@@ -1,0 +1,11 @@
+{
+  "name": "restaurent",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-14",
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "restaurent"
+    }
+  ]
+}
