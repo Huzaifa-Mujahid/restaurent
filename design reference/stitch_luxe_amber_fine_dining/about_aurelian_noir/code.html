@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Heritage | Aurelian Noir</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "secondary": "#ffe2ab",
+                    "primary-container": "#d4af37",
+                    "on-background": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed": "#ffdcc3",
+                    "primary": "#f2ca50",
+                    "on-primary-fixed": "#241a00",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed-dim": "#fbbc00",
+                    "surface-container-highest": "#353534",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-tint": "#e9c349",
+                    "error": "#ffb4ab",
+                    "tertiary": "#ffc293",
+                    "on-secondary-container": "#6d5000",
+                    "outline-variant": "#4d4635",
+                    "on-primary": "#3c2f00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed-variant": "#6e3900",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-container": "#6c3800",
+                    "on-secondary": "#402d00",
+                    "on-tertiary-fixed": "#2f1500",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "on-primary-container": "#554300",
+                    "secondary-container": "#ffbf00",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdfa0",
+                    "surface": "#131313",
+                    "primary-fixed": "#ffe088",
+                    "inverse-primary": "#735c00",
+                    "outline": "#99907c",
+                    "on-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "surface-container": "#201f1f",
+                    "on-tertiary": "#4d2600",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-secondary-fixed": "#261a00",
+                    "background": "#131313",
+                    "tertiary-fixed-dim": "#ffb77d",
+                    "tertiary-container": "#ff9b3f",
+                    "on-surface-variant": "#d0c5af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "container-max": "1200px",
+                    "margin-mobile": "1.5rem",
+                    "section-gap": "8rem",
+                    "stack-lg": "3rem",
+                    "stack-md": "1.5rem",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sepia-effect {
+            filter: sepia(0.6) contrast(1.1) brightness(0.9);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(242, 202, 80, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-dim/80 dark:bg-surface-dim/90 backdrop-blur-md border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Aurelian Noir</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Menu</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Reservation</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary-fixed px-6 py-2 rounded-lg font-label-caps text-label-caps hover:bg-secondary-fixed transition-all duration-300 active:scale-95">
+                Book a Table
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[70vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-50" data-alt="A cinematic, high-speed shutter capture of a professional fine-dining kitchen in motion. Soft, warm amber lighting highlights floating flour dust and steam. Chefs in white coats move as blurred silhouettes against dark charcoal surfaces. The mood is intense, focused, and luxurious, using a dark-mode palette with deep golden accents from heat lamps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD4rdQyEh-uLhJVUtZiwIzELiw3pweJWHf7LM6jdtsqSc6Q6eTc-c9u2f99IbRWliqctYIRIZKMhgus_yYyoAx0bw1MXYPneSjLhNALjWvjpC-BbWOr_t7vplOBkyzB_mZSERQuIa4EIPSsmH2a6C0DS0JuAc24yvZnk7nimeK19bk0vzkl_QsPitDV7VO_fp_72SWyci6-Y_6W4XPt8_AnbsWRRp_bhixD8R5Tnht0LY-Trjx7CDc"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface-dim/40 to-surface-dim"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.3em] mb-4 block">SINCE 1924</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-stack-md text-glow">Our Heritage</h1>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto">
+<!-- History Section -->
+<section class="px-margin-mobile md:px-gutter py-section-gap grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="order-2 md:order-1">
+<div class="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-lg border border-primary/20 p-4">
+<img class="w-full h-full object-cover sepia-effect rounded-sm" data-alt="A vintage, sepia-toned archival photograph from the early 20th century showing the original cobblestone exterior of the Aurelian Noir restaurant. The building is a classic European architecture with ornate ironwork lamps and a hand-painted wooden sign. The image has a grainy, tactile texture evoking historical prestige and a dark, moody atmospheric quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw0HtgzjPQatRE8xIVMEcTAS4PaDWg7FG0ZyWScY4AGwb7VIN4O--Xz72ldkVOuCP-xSPWv3Zi3p1lDOdqzIpCZ_MOFDEegGSg9o4a_GPwRJfc2Bho58bHWIxwL0uUZM4F5Ej_35k0eHkvWmfjh1G4IQtHrzcb05LP9y62ssy8gC0sds2DUuc2EmepCU-sdYaWSdD2hyfwynd-mVSaxfVVakhjoPqw7aofoUFrsUjiYHQwh_KhBcnw"/>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-stack-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Foundational Flame</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Founded in the heart of the golden era, Aurelian Noir began as a humble sanctuary for culinary artists. It was born from a vision where the raw intensity of fire meets the refined elegance of gold.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                    For a century, our kitchen has been a silent witness to the evolution of taste. What started as a secret cellar gathering for the city's gourmands has transformed into a global beacon of Gastronomy. Every dish we serve is a chapter of our history, meticulously preserved and daringly reimagined.
+                </p>
+<div class="pt-stack-md">
+<button class="border border-primary-container text-primary-container px-8 py-3 rounded-lg font-label-caps text-label-caps hover:bg-primary-container/10 transition-colors duration-300">
+                        View Historical Gallery
+                    </button>
+</div>
+</div>
+</section>
+<!-- Chef's Profile Section -->
+<section class="bg-surface-container-lowest py-section-gap border-y border-outline-variant/10">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 space-y-stack-md">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">EXECUTIVE CHEF</span>
+<h2 class="font-display-lg text-headline-lg text-on-background">Marcus Aurelius</h2>
+<div class="w-12 h-[2px] bg-primary"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">"Cuisine is the only art form that engages all five senses at once. It is not just about nutrition; it is about memory, emotion, and precision."</p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        With three Michelin stars and a lifetime spent in the world's most prestigious kitchens, Chef Marcus brings a philosophy of 'Minimalist Excellence' to Aurelian Noir. His approach balances the aggressive textures of seasonal ingredients with the delicate, golden-ratio plating that has become our signature.
+                    </p>
+<div class="flex gap-stack-md items-center py-stack-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">MICHELIN RECOGNIZED</span>
+</div>
+</div>
+<div class="md:col-span-5 relative group">
+<div class="absolute -inset-4 border border-primary/10 rounded-lg group-hover:scale-105 transition-transform duration-700"></div>
+<img class="w-full rounded-lg shadow-2xl relative z-10" data-alt="A high-end, dramatic portrait of Executive Chef Marcus Aurelius in a minimalist charcoal chef's coat. He is standing in a dimly lit, high-contrast studio environment. Side-lighting reveals sharp facial features and a look of intense dedication. His hands rest on a dark stone surface next to a single sprig of golden saffron. The aesthetic is luxurious, moody, and sharp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgOq5phwWR-JEsvVN_zRxKL-ZTyTrnix-JJRJaZ6UB_Hzx59Y51sneVK-Le1OUly-gQErSUDpOctXWwO4sz7k9APCwvE8GJmu0WPonNVBGu0VOuklosxVE6QWLHDAP1XWcrgoQVgoQ-3998Cc3Lp_i6SPfFM7Uufd2_bYkncBUFXD24562mAf7BDmLvV8pcY_5lv0vsGIBp28TItOxZgimTz2O8ToMDaXeSPW2dVaQsxgsg4ZWWKjt"/>
+</div>
+</div>
+</section>
+<!-- Ambiance Grid Section -->
+<section class="px-margin-mobile md:px-gutter py-section-gap text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">The Sacred Spaces</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="group relative overflow-hidden rounded-lg aspect-[3/4]">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="An ultra-modern, upscale cocktail bar area within Aurelian Noir. The bar top is backlit onyx with a golden glow. Crystal glassware is perfectly arranged. Behind the bar, rows of rare spirits catch the warm, low-key lighting. Dark wood accents and plush velvet stools complete the sophisticated, intimate lounge atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUaiFb6LEhG4-TQBEMCSwHrz56m-aenxL0b4NTXXbvOLkPaYsipjKGdLA5juz0URcoDovesTM7KMnXygRbfLyDgkUTO_2Cq57OGVXt6ixEH4cXf0JdtIfhNMEgnAdYVgi2QP1Z1JZogrRO2nuA7xIhEEWfHAa1BQX1tHbjFtb0hJqVMtfgQW_8xTi3TrT2D7a7m-7YFAH1Khn3klKBJVjsBsmSemOmXTJ_SjbQPsfq2YW_gSCqh8Lj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8 text-left">
+<span class="font-label-caps text-label-caps text-primary mb-2">THE OBSERVATORY</span>
+<h3 class="font-headline-md text-on-background">Mixology Bar</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-[3/4]">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="The main dining room of a fine-dining establishment with a dark-mode interior design. High ceilings with architectural shadow-play. Round tables covered in crisp black linen, illuminated by focused pin-lights on the centerpieces. Polished concrete floors reflect the subtle amber glow. A masterpiece of minimalist luxury and quiet privacy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChdfdCx4QyjRl7zU6JdK-Gf_PUgUvLfOVFeKkz2q1_ZONiZ7wwC9NbMOeczOzjs2oG7jGtW7nHNZ9HSvH95OKeFtNNz4hf0Drqongx82Al_-_iQkcaa4F11WIKx4oyQApvHv-p4lZbVOD_lc7fOg5gfWsb8271HjprztAQaFq4FhaznXuQARWWEKR9Ewcx80i6_npt4ibI3UGxKJtO_kNm0W-pXW7hoh4zyrXNfN2rve6TBXkUidV6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8 text-left">
+<span class="font-label-caps text-label-caps text-primary mb-2">THE HEART</span>
+<h3 class="font-headline-md text-on-background">Main Hall</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg aspect-[3/4]">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A private dining lounge with deep emerald velvet curtains and dark mahogany paneling. A long, massive oak table is set for ten guests with gold-plated cutlery. The lighting is provided by flickering candles and a modern minimalist chandelier. The mood is extremely exclusive, secretive, and opulent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZCplkiKryF_HQjQxoJtiOi6hRKg0MnKW-DM9m-aH3cU2dyJt_BCxZIuRTO_3dGoIlOHhq6G6AzjmxCWPicKpE-V_dk1Aw_Wa16NKtpM90hQnzeOIp0iTJmZJGIojVO4u9-bgagq_Mxb0lswoGj_O6IpJwX6ijeTGGXflEofAR48R6TVn95AED-8Jjkd9Z2MRGMFJ4GIaCxcIP7qNiI1PS0om_ZLQKLERrp0eb3EoLZ3ZGA52p546_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8 text-left">
+<span class="font-label-caps text-label-caps text-primary mb-2">THE NOIR ROOM</span>
+<h3 class="font-headline-md text-on-background">Private Lounge</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="bg-surface-container py-section-gap rounded-xl mx-margin-mobile mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg px-gutter">
+<div class="text-center space-y-stack-sm">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-stack-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="brush">brush</span>
+</div>
+<h3 class="font-label-caps text-label-caps text-on-background">Craftsmanship</h3>
+<p class="text-on-surface-variant text-sm">Every element, from the hand-carved plates to the complex sauces, is an exercise in technical mastery.</p>
+</div>
+<div class="text-center space-y-stack-sm">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-stack-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="diamond">diamond</span>
+</div>
+<h3 class="font-label-caps text-label-caps text-on-background">Elegance</h3>
+<p class="text-on-surface-variant text-sm">We believe that true luxury is quiet. Our service is invisible yet omnipresent, refined to the highest degree.</p>
+</div>
+<div class="text-center space-y-stack-sm">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-stack-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="eco">eco</span>
+</div>
+<h3 class="font-label-caps text-label-caps text-on-background">Sustainability</h3>
+<p class="text-on-surface-variant text-sm">We honor the earth by sourcing exclusively from local artisans and farmers who share our ethical vision.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="space-y-stack-md">
+<div class="font-headline-md text-headline-md text-primary">Aurelian Noir</div>
+<p class="text-on-surface-variant text-sm">A centennial legacy of culinary excellence, where the art of fine dining is refined for the modern age.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-background mb-stack-md">Reservations</h4>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li class="hover:text-secondary transition-colors duration-200 cursor-pointer">Book Table</li>
+<li class="hover:text-secondary transition-colors duration-200 cursor-pointer">Private Dining</li>
+<li class="hover:text-secondary transition-colors duration-200 cursor-pointer">Gift Cards</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-background mb-stack-md">Legal</h4>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li class="hover:text-secondary transition-colors duration-200 cursor-pointer">Privacy Policy</li>
+<li class="hover:text-secondary transition-colors duration-200 cursor-pointer">Terms of Service</li>
+<li class="hover:text-secondary transition-colors duration-200 cursor-pointer">Cookies</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-background mb-stack-md">Contact</h4>
+<p class="text-on-surface-variant text-sm mb-2">124 Aurelian Plaza, Gold District</p>
+<p class="text-on-surface-variant text-sm mb-2">+1 (555) 012-3456</p>
+<p class="text-on-surface-variant text-sm">concierge@aureliannoir.com</p>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-margin-mobile text-center">
+<p class="text-on-surface-variant text-label-caps font-label-caps">© 2024 Aurelian Noir. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple parallax-like header effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('header img');
+            if(heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

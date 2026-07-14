@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Aurelian Noir</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "secondary": "#ffe2ab",
+                    "primary-container": "#d4af37",
+                    "on-background": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed": "#ffdcc3",
+                    "primary": "#f2ca50",
+                    "on-primary-fixed": "#241a00",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed-dim": "#fbbc00",
+                    "surface-container-highest": "#353534",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-tint": "#e9c349",
+                    "error": "#ffb4ab",
+                    "tertiary": "#ffc293",
+                    "on-secondary-container": "#6d5000",
+                    "outline-variant": "#4d4635",
+                    "on-primary": "#3c2f00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed-variant": "#6e3900",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-container": "#6c3800",
+                    "on-secondary": "#402d00",
+                    "on-tertiary-fixed": "#2f1500",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "on-primary-container": "#554300",
+                    "secondary-container": "#ffbf00",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdfa0",
+                    "surface": "#131313",
+                    "primary-fixed": "#ffe088",
+                    "inverse-primary": "#735c00",
+                    "outline": "#99907c",
+                    "on-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "surface-container": "#201f1f",
+                    "on-tertiary": "#4d2600",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-secondary-fixed": "#261a00",
+                    "background": "#131313",
+                    "tertiary-fixed-dim": "#ffb77d",
+                    "tertiary-container": "#ff9b3f",
+                    "on-surface-variant": "#d0c5af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "container-max": "1200px",
+                    "margin-mobile": "1.5rem",
+                    "section-gap": "8rem",
+                    "stack-lg": "3rem",
+                    "stack-md": "1.5rem",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            color: #f2ca50;
+        }
+        .grayscale-map {
+            filter: grayscale(100%) invert(90%) contrast(90%);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(13,13,13,0.4), rgba(13,13,13,0.9));
+        }
+        .luxury-border {
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .luxury-focus:focus {
+            outline: none;
+            border-bottom-color: #f2ca50 !important;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/20">
+<nav class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Aurelian Noir</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Menu</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Reservation</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Gallery</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2.5 rounded-lg active:scale-95 transition-all duration-300 hover:bg-primary/90">
+                Book a Table
+            </button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] scale-105" data-alt="A moody, soft-focus interior of a high-end Michelin-star restaurant at night. Warm amber lighting catches the edges of crystal glassware and gold-rimmed plates on dark oak tables. The background is elegantly blurred to create a cinematic sense of depth and exclusivity. Deep shadows and golden highlights dominate the palette, evoking a quiet, sophisticated atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDC6VkUgJ2RPNcAWRnk68PFa3jFVvhcaLXzwnxCrZUKOQIgXyj7VNV91VcY0rdDzr05_kgoSpzOxEs64ex7Q14-36sTrQrpoglQE-DQ2GTlkdU7K0cLvPCMumrV6NbTjRuS6qfhqhOcuIvl0-7ObWYGGLQSd8EJ228oC69eovpJVPCtHxCBsmuGqD5tpadim9_F4p9Di_f1vxk33Jmcn7agK7KyoAYc9v3GW4fRhdmWExkRkS0FRWbQ')">
+</div>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg text-display-lg md:text-display-lg mb-4 text-white">Get In Touch</h1>
+<p class="font-body-lg text-body-lg text-secondary/80 max-w-2xl mx-auto">Where culinary excellence meets unparalleled hospitality. Reach out to weave your next memorable evening.</p>
+</div>
+</section>
+<!-- Main Content Split -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Left: Contact Details & Opening Hours -->
+<div class="space-y-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Concierge Details</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">Visit Us</p>
+<p class="text-on-surface text-body-md">124 Gold Leaf Avenue, Mayfair<br/>London, W1K 6ZA, UK</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-3xl">call</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">Direct Dial</p>
+<p class="text-on-surface text-body-md">+44 (0) 20 7946 0128</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-3xl">mail</span>
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">Correspondence</p>
+<p class="text-on-surface text-body-md">concierge@aureliannoir.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 luxury-border-t border-t border-outline-variant/30">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Opening Hours</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant/10 pb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Mon — Thu</span>
+<span class="font-body-md text-on-surface">18:00 – 23:00</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/10 pb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Fri — Sat</span>
+<span class="font-body-md text-on-surface">17:00 – 00:00</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/10 pb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Sunday</span>
+<span class="font-body-md text-secondary italic">Closed for Private Events</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Contact Form -->
+<div class="bg-surface-container-low p-8 md:p-12 luxury-border rounded-lg shadow-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Send an Inquiry</h2>
+<form class="space-y-8" id="contactForm">
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary/60 block mb-2 transition-colors group-focus-within:text-primary">Your Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/50 luxury-focus p-0 pb-2 text-on-surface font-body-md transition-all placeholder:text-surface-variant" placeholder="Alexander Dupont" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary/60 block mb-2 transition-colors group-focus-within:text-primary">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/50 luxury-focus p-0 pb-2 text-on-surface font-body-md transition-all placeholder:text-surface-variant" placeholder="alex@domain.com" type="email"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary/60 block mb-2 transition-colors group-focus-within:text-primary">Subject</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/50 luxury-focus p-0 pb-2 text-on-surface font-body-md transition-all appearance-none">
+<option class="bg-surface-dim">General Inquiry</option>
+<option class="bg-surface-dim">Private Event Booking</option>
+<option class="bg-surface-dim">Press &amp; Media</option>
+<option class="bg-surface-dim">Feedback</option>
+</select>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary/60 block mb-2 transition-colors group-focus-within:text-primary">Your Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/50 luxury-focus p-0 pb-2 text-on-surface font-body-md transition-all resize-none placeholder:text-surface-variant" placeholder="Tell us how we can assist you..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-label-caps text-label-caps py-4 rounded-lg hover:bg-primary transition-all duration-300 shadow-lg shadow-primary-container/10 active:scale-95" type="submit">
+                        Submit Inquiry
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[500px] bg-surface-container-lowest overflow-hidden relative group">
+<div class="absolute inset-0 z-10 pointer-events-none border-y border-outline-variant/20 shadow-[inset_0_0_100px_rgba(0,0,0,0.8)]"></div>
+<div class="w-full h-full grayscale-map opacity-80 group-hover:opacity-100 transition-opacity duration-700 bg-cover bg-center" data-alt="A stylized, minimalist dark-mode map of the Mayfair district in London. The map uses a monochrome palette of deep charcoals and blacks with golden accents for major landmarks. Fine lines represent streets and avenues, creating a sophisticated architectural look that integrates perfectly with the luxury restaurant aesthetic." data-location="London Mayfair" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFr9KF8-lkCLujk0Q_u_ygOLT-cgi8ajPbjN4cOI4qBO0pb58iTDULPB7Ot_4DR-B_PtQY4VJWVBivyax7LpBUTPKVkSLWD1ie5nvo8dUibNZu9rQgQjDfNn9aGli8Q91AVvW-4f5Buy0qTaVuynhI5VlMkS-3OLz-AXWmkqpGHyunadXarAIqexxS5j2hvfaJGAeps1-KiDu44p5aZISM8FmfowgTUcL17AGtNb-rMRLzT3ZvCELr')">
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+<div class="bg-primary p-4 rounded-full shadow-[0_0_30px_rgba(242,202,80,0.5)] animate-pulse">
+<span class="material-symbols-outlined text-on-primary text-3xl">restaurant</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto pt-section-gap pb-8">
+<div class="md:col-span-2">
+<div class="font-headline-md text-headline-md text-primary mb-6">Aurelian Noir</div>
+<p class="text-on-surface-variant font-body-md max-w-md leading-relaxed">
+                    Crafting extraordinary culinary moments since 2018. We believe in the precision of the kitchen and the poetry of the plate.
+                </p>
+<div class="mt-8 flex gap-6">
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-primary hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">event</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Navigation</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">Menu</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Reservation</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Wine Cellar</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Private Dining</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Newsletter</h4>
+<p class="text-label-caps text-on-surface-variant mb-4">Stay informed on seasonal releases.</p>
+<div class="flex border-b border-outline-variant">
+<input class="bg-transparent border-0 w-full py-2 text-on-surface focus:ring-0 placeholder:text-outline-variant" placeholder="Email" type="email"/>
+<button class="text-primary hover:text-secondary px-2"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-8 pt-12">
+<div class="border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2024 Aurelian Noir. All rights reserved.</p>
+<div class="flex gap-8 font-label-caps text-label-caps text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for form inputs
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.opacity = '1';
+            });
+        });
+
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Transmitting...';
+            btn.classList.add('opacity-70');
+            
+            setTimeout(() => {
+                btn.innerText = 'Inquiry Received';
+                btn.classList.remove('opacity-70', 'bg-primary-container');
+                btn.classList.add('bg-green-600', 'text-white');
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-600', 'text-white');
+                    btn.classList.add('bg-primary-container');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBg = document.querySelector('.bg-cover');
+            if (heroBg) {
+                heroBg.style.transform = `translateY(${scrolled * 0.4}px) scale(1.05)`;
+            }
+        });
+    </script>
+</body></html>

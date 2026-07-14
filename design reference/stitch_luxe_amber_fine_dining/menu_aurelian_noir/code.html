@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu | Aurelian Noir Fine Dining</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "secondary": "#ffe2ab",
+                    "primary-container": "#d4af37",
+                    "on-background": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed": "#ffdcc3",
+                    "primary": "#f2ca50",
+                    "on-primary-fixed": "#241a00",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed-dim": "#fbbc00",
+                    "surface-container-highest": "#353534",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-tint": "#e9c349",
+                    "error": "#ffb4ab",
+                    "tertiary": "#ffc293",
+                    "on-secondary-container": "#6d5000",
+                    "outline-variant": "#4d4635",
+                    "on-primary": "#3c2f00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed-variant": "#6e3900",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-container": "#6c3800",
+                    "on-secondary": "#402d00",
+                    "on-tertiary-fixed": "#2f1500",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "on-primary-container": "#554300",
+                    "secondary-container": "#ffbf00",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdfa0",
+                    "surface": "#131313",
+                    "primary-fixed": "#ffe088",
+                    "inverse-primary": "#735c00",
+                    "outline": "#99907c",
+                    "on-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "surface-container": "#201f1f",
+                    "on-tertiary": "#4d2600",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-secondary-fixed": "#261a00",
+                    "background": "#131313",
+                    "tertiary-fixed-dim": "#ffb77d",
+                    "tertiary-container": "#ff9b3f",
+                    "on-surface-variant": "#d0c5af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "container-max": "1200px",
+                    "margin-mobile": "1.5rem",
+                    "section-gap": "8rem",
+                    "stack-lg": "3rem",
+                    "stack-md": "1.5rem",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at center, rgba(242, 202, 80, 0.15) 0%, rgba(13, 13, 13, 0) 70%);
+        }
+        .chef-badge-glow {
+            box-shadow: 0 0 15px rgba(242, 202, 80, 0.2);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4d4635;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-dim/80 dark:bg-surface-dim/90 backdrop-blur-md border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">
+                Aurelian Noir
+            </div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">Menu</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Reservation</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors duration-300 font-label-caps text-label-caps" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary-fixed px-6 py-2.5 rounded-lg font-label-caps text-label-caps hover:bg-primary-container transition-all duration-300 active:scale-95">
+                Book a Table
+            </button>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="relative py-24 hero-glow flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="max-w-3xl px-margin-mobile">
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">CURATED GASTRONOMY</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">The Culinary Collection</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">An orchestral fusion of heritage and innovation, meticulously plated for the most discerning palates.</p>
+</div>
+<div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full max-w-container-max h-px bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent"></div>
+</section>
+<!-- Category Tabs -->
+<section class="sticky top-[72px] z-40 bg-background/95 backdrop-blur-sm py-8">
+<div class="max-w-container-max mx-auto px-margin-mobile flex justify-center">
+<div class="flex flex-wrap justify-center gap-4 md:gap-12">
+<button class="group relative flex flex-col items-center py-2 px-4 transition-all duration-300">
+<span class="font-label-caps text-label-caps text-primary mb-1">Starters</span>
+<div class="w-8 h-0.5 bg-primary rounded-full transition-all duration-300"></div>
+</button>
+<button class="group relative flex flex-col items-center py-2 px-4 transition-all duration-300 opacity-60 hover:opacity-100">
+<span class="font-label-caps text-label-caps text-on-surface mb-1">Main Course</span>
+<div class="w-0 h-0.5 bg-primary rounded-full group-hover:w-8 transition-all duration-300"></div>
+</button>
+<button class="group relative flex flex-col items-center py-2 px-4 transition-all duration-300 opacity-60 hover:opacity-100">
+<span class="font-label-caps text-label-caps text-on-surface mb-1">Desserts</span>
+<div class="w-0 h-0.5 bg-primary rounded-full group-hover:w-8 transition-all duration-300"></div>
+</button>
+<button class="group relative flex flex-col items-center py-2 px-4 transition-all duration-300 opacity-60 hover:opacity-100">
+<span class="font-label-caps text-label-caps text-on-surface mb-1">Beverages</span>
+<div class="w-0 h-0.5 bg-primary rounded-full group-hover:w-8 transition-all duration-300"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Menu Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Chef's Special Item 1 -->
+<div class="group flex items-start gap-stack-md p-6 rounded-xl border border-primary/20 bg-surface-container-low/50 chef-badge-glow transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-on-primary-fixed px-3 py-1 font-label-caps text-[10px] tracking-tighter">CHEF'S SPECIAL</div>
+<div class="flex-shrink-0 relative">
+<div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 p-1 bg-surface-container-highest">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-110" data-alt="A gourmet close-up of a pan-seared sea scallop presented on a charcoal-colored ceramic plate. The scallop is topped with a micro-herb garnish and a delicate saffron-infused foam. Warm, moody atmospheric lighting illuminates the textures of the food against a deep, dark background. The aesthetic is luxurious and artistic, emphasizing the golden-brown crust of the scallop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_WvVc76_lFWOPGTbLEFd_pUYz4so4Q45BGW7B2bz8NWWij6kic5EN5RlYkCeao6DsTLcD1QrwkErdk05wXlfRjXYfHJUKPIA_l1ZrlB6h5-vBevFOfTNoz8D5KhhKrYeQaZ1xdVUlRrC9ASYLHnR4GS_X8qpEAx6qkQNBa22ZWIsRYSkq3kB62SxC_vIWw-bmOILa1vvi3gnQp8Njp4XhbOfAyreANzJO7aPsvxuFo7eq6g-JnCFb"/>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-md text-[20px] text-on-surface">Amber Glazed Scallops</h3>
+<span class="font-label-caps text-label-caps text-primary">$32</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Hokkaido scallops, honey-amber reduction, parsnip purée, and toasted pine nuts.</p>
+<div class="mt-4 flex gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex items-start gap-stack-md p-6 rounded-xl border border-outline-variant/10 bg-transparent transition-all duration-500 hover:bg-surface-container-low">
+<div class="flex-shrink-0">
+<div class="w-24 h-24 rounded-full overflow-hidden border border-outline-variant/30 p-1 bg-surface-container-highest">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-110" data-alt="Exquisite plate of truffle-infused wild mushroom risotto presented in a wide-rimmed porcelain bowl. Shavings of fresh black truffle and a drizzle of emerald-green herb oil decorate the creamy texture. Soft lighting reflects off the gold-flecked edges of the plate, creating a sense of refined opulence. The dark tabletop background contrasts sharply with the vibrant, earthy colors of the dish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk9gT1XtSSvwV957GlqbhTf59rRzpNLTPzL1fnW4gfzP-UBe7_jvN70ZhVOE2zPwg8i4zpQ7RkxecmJve1L6iJ98Kl32yMjIwZAzgfLm7CBH_BMKaPS47WT5Dm91EWM7jK4FvGP-SMrIb4KD8wNG_Df__WWLGw12GFBkT2OrTYp2MHFYUa8xo51IKT3E6wfURy6g5eWbIuhfbOjLvRKBuj92H00pymAUEUOr0YP6frfBtCboDLNp6e"/>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-md text-[20px] text-on-surface">Black Truffle Risotto</h3>
+<span class="font-label-caps text-label-caps text-primary">$28</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Acquerello rice, seasonal black truffle, 24-month aged parmesan, and forest fungi.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex items-start gap-stack-md p-6 rounded-xl border border-outline-variant/10 bg-transparent transition-all duration-500 hover:bg-surface-container-low">
+<div class="flex-shrink-0">
+<div class="w-24 h-24 rounded-full overflow-hidden border border-outline-variant/30 p-1 bg-surface-container-highest">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist presentation of heirloom tomato carpaccio. Thinly sliced vibrant red and yellow tomatoes are arranged in a circular pattern on a matte black plate. Topped with dollops of buffalo mozzarella, fresh basil leaves, and balsamic pearls. Shot from a high angle under soft, natural-looking light to highlight the fresh, organic textures and high-contrast color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-NsC8CmQzdBRz0m6jm_46HlfYZEkWXUKXtIadQj08SQYh2kUEYZENPSP62_P0tSoLo__G-szZsN6WcGbWIYb403VCT912ztcYcNdBkF-Trj92wpAQKt4Xt1S0PYn9fAmAb3tepbDl-eyM4bBpglwbjIcJCfvFt3u2D7lezWbZowMhZzk34MUSvXAk6QGnviMPCkNRW_QtQJPw4hktDRBklklL_9Hc3Vn_VK1rJbBU6_2b7v6VVUhh"/>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-md text-[20px] text-on-surface">Heritage Tomato Carpaccio</h3>
+<span class="font-label-caps text-label-caps text-primary">$18</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Burrata cream, balsamic pearls, fresh basil oil, and crispy sourdough tuile.</p>
+</div>
+</div>
+<!-- Chef's Special Item 4 -->
+<div class="group flex items-start gap-stack-md p-6 rounded-xl border border-primary/20 bg-surface-container-low/50 chef-badge-glow transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-on-primary-fixed px-3 py-1 font-label-caps text-[10px] tracking-tighter">CHEF'S SPECIAL</div>
+<div class="flex-shrink-0">
+<div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 p-1 bg-surface-container-highest">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-110" data-alt="Artistically plated Wagyu beef tartare served in a hand-crafted stone bowl. The tartare is topped with a golden quail egg yolk and edible gold leaf. Surroundings include microscopic greens and edible flowers. The lighting is cinematic, focusing on the rich red tones of the beef and the brilliant yellow of the yolk. The dark, minimalist environment emphasizes the premium nature of the ingredients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVeGutSat5JBEcC2ZRhK8RnHY1TkjS6N6QYGZMWFBjhLTSItGpEKyzNWiPH5we8unE8jMVqpibpOB4MSYRt-payoKGiePV0yVMgUx9l6ItKxySqGRxgfttbLo-H5UW1VS-DGJzCI7ealhQLXrdorbzyxQH_b6TV9u2EPEoT7Y1DgxMX0gTRz8UScAkrDML2_s-YPT9tM-Wauch25yoKFKgS3Cww6h9aFpryO_9lI3lA-CRfnv7vxk7"/>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-md text-[20px] text-on-surface">A5 Wagyu Tartare</h3>
+<span class="font-label-caps text-label-caps text-primary">$45</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Hand-cut Wagyu, cured quail egg, shallot confit, and gold leaf finish.</p>
+<div class="mt-4 flex gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="group flex items-start gap-stack-md p-6 rounded-xl border border-outline-variant/10 bg-transparent transition-all duration-500 hover:bg-surface-container-low">
+<div class="flex-shrink-0">
+<div class="w-24 h-24 rounded-full overflow-hidden border border-outline-variant/30 p-1 bg-surface-container-highest">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-110" data-alt="A delicate seafood bisque served in a white shallow plate. A single grilled tiger prawn rests in the center, surrounded by a rich, saffron-colored broth. The dish is garnished with a sprig of dill and drops of cream. Soft, warm lighting enhances the smooth texture of the soup. The setting is high-end dining, with a dark wood background providing a luxurious context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAdWOBPZzRbIHrqR7yyimQj0dFtxITNU367ZYVZbWpqTh1c6RpIQcMGauNe81PgIdBjg4JHa2lDdkitJH07-nMbEm57XZyk2LvQZKb9usxFfXT_D2XwOaaCBFQZL_gNQCnFK85P-mlvmZBIKkYQUOD5If4O4x5MdPCaf_hxCrK31uD2dhEgkNxq4XSboFWTHk-4gkIynntgm4guuY4XYouqZrIFYL9p5t265QOROanMpq8eNDiN7JJ"/>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-md text-[20px] text-on-surface">Lobster Bisque</h3>
+<span class="font-label-caps text-label-caps text-primary">$24</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Slow-simmered Maine lobster, saffron cream, Cognac, and chive oil.</p>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="group flex items-start gap-stack-md p-6 rounded-xl border border-outline-variant/10 bg-transparent transition-all duration-500 hover:bg-surface-container-low">
+<div class="flex-shrink-0">
+<div class="w-24 h-24 rounded-full overflow-hidden border border-outline-variant/30 p-1 bg-surface-container-highest">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-110" data-alt="A platter of honey-glazed roasted duck breast, sliced to reveal a perfect pink center. The skin is crispy and caramelized. Accompanied by a vibrant orange-ginger reduction and sautéed bok choy. The lighting is focused and warm, highlighting the moistness of the meat and the glossy sauce. Dark slate background creates a modern, sophisticated atmosphere for fine dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPZjV4l7dnVQL--vnXAXjpShbc2DqXP9hx1sPBwLlPZggcx8NRzaGLNIUFoWNkMID53dubpEl0CosUGEcTh0lW6ZiEhBs9ZEzkbjS-D7Yeos9dX2s9IbEPWJzXwLmWZiEsbdNG9Cmp2YsSx2ShReOXQOTvijU1vbPcvqD09Sban-0-mI42leJL1Tj547sRcuPAwVCxnDskPy8UuKa4q_AWFGpa3zwAx-FKAcXMxJuFyfgXeoprLWbv"/>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-headline-md text-[20px] text-on-surface">Spiced Duck Breast</h3>
+<span class="font-label-caps text-label-caps text-primary">$38</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Lavender honey glaze, orange-infused jus, and caramelized baby carrots.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-lowest py-24 text-center border-t border-outline-variant/10">
+<div class="max-w-2xl mx-auto px-margin-mobile">
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8">Ready for an Unforgettable Evening?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary-fixed px-10 py-4 rounded-lg font-label-caps text-label-caps hover:bg-primary-container transition-all duration-300">Reserve Your Table</button>
+<button class="border border-primary text-primary px-10 py-4 rounded-lg font-label-caps text-label-caps hover:bg-primary/10 transition-all duration-300">View Event Space</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-8 bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md text-primary">Aurelian Noir</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The intersection of taste and elegance. Experience the pinnacle of culinary artistry.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Contact</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">location_on</span> 123 Gourmet Ave, Paris</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">call</span> +33 1 23 45 67 89</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">mail</span> concierge@aurelian.com</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Hours</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li>Tue - Thu: 18:00 - 22:00</li>
+<li>Fri - Sat: 18:00 - 00:00</li>
+<li>Sunday: 12:00 - 21:00</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 px-margin-mobile md:px-gutter pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-[14px] text-on-surface-variant opacity-60">© 2024 Aurelian Noir. All rights reserved.</p>
+<div class="flex gap-6 font-label-caps text-[11px] text-on-surface-variant">
+<a class="hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle interaction: Parallax effect for circular thumbnails
+        document.addEventListener('mousemove', (e) => {
+            const items = document.querySelectorAll('.group img');
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
+            
+            items.forEach(img => {
+                img.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+            });
+        });
+
+        // Sticky Nav logic: adding shadows on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-xl', 'shadow-black/20');
+            } else {
+                header.classList.remove('shadow-xl', 'shadow-black/20');
+            }
+        });
+    </script>
+</body></html>
